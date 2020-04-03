@@ -17,7 +17,8 @@ public class Calculo {
         int questao;
         boolean invalid = true;
         System.out.println("Q1: " + q1());        
-        System.out.println("Q2: " + q2());
+        System.out.println("Q2: " + q2());  
+        System.out.println("Q3: X: " + q3()[0] + "\tY: "+ q3()[1]);
 
 //        do{
 //            System.out.println("Questão 1: Paraquedista");
@@ -78,5 +79,34 @@ public class Calculo {
 	}while(erro > 0.01);
         return x;
     }
-    
+    public static double[] q3(){
+        double x, x0, y, y0, f, g, fy, fx, gy, gx, errox, erroy, detx, dety, detd;
+        double[] resultado = new double[2];
+        x0 = 2.3;
+        y0 = 5;
+        fy = 1;
+        gy = -1;
+        do{
+            f = y0 - 10 + Math.pow(x0, 2);
+            g = 15 - Math.pow(Math.E, x0) - y0;
+            fx = 2*x0;
+            gx = - Math.pow(Math.E, x0);
+            detx = det(f, fy, g, gy);
+            dety = det(fx, f, gx, g);
+            detd = det(fx, fy, gx, gy);
+            x = x0 - detx/detd;
+            y = y0 - dety/detd;
+            errox = Math.abs(x - x0);
+            erroy = Math.abs(y - y0);
+            x0 = x;
+            y0 = y;
+        }while((errox > 0.01) && (erroy > 0.01));
+        resultado[0] = x;
+        resultado[1] = y;
+        return resultado;
+    }
+    public static double det(double a, double b, double c, double d){
+        
+        return (a*d-b*c);
+    }
 }
