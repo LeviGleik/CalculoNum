@@ -16,7 +16,9 @@ public class Calculo {
         double x, y, a, b, erro_min;
         int questao;
         boolean invalid = true;
-        System.out.println("Q1: " + q1());
+        System.out.println("Q1: " + q1());        
+        System.out.println("Q2: " + q2());
+
 //        do{
 //            System.out.println("Questão 1: Paraquedista");
 //            System.out.println("Questão 2: Tanque esférico");
@@ -51,7 +53,6 @@ public class Calculo {
     }
     public static double q1(){
         double a, a0 = 40, fa, b, b0 = 90, fb, x, x0 = 65, y, erro = 1;
-        int i = 0;
         a = a0;
         b = b0;
         do{           
@@ -67,6 +68,15 @@ public class Calculo {
         return x;
     }
     public static double q2(){
-        return 2.4;
+        double x0 = 1, y, dy, x, erro;
+        do{           
+            y = 18.18 * Math.pow(x0, 2) - 2.1 * x0 - 30;
+            dy = 36.36 * x0 - 2.1;
+            x = x0 - (y/dy);
+            erro = Math.abs(x - x0);
+            x0 = x;
+	}while(erro > 0.01);
+        return x;
     }
+    
 }
