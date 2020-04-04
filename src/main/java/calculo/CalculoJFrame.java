@@ -49,6 +49,7 @@ public class CalculoJFrame extends javax.swing.JFrame {
         q4Label = new javax.swing.JLabel();
         q5Label = new javax.swing.JLabel();
         respostaPanel = new javax.swing.JPanel();
+        q1RespostaLabel = new javax.swing.JLabel();
         topoPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -77,7 +78,7 @@ public class CalculoJFrame extends javax.swing.JFrame {
                 btnQ2ActionPerformed(evt);
             }
         });
-        principalPanel.add(btnQ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, -1, -1));
+        principalPanel.add(btnQ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, -1, -1));
 
         btnQ3.setText("Questão 3");
         btnQ3.addActionListener(new java.awt.event.ActionListener() {
@@ -85,7 +86,7 @@ public class CalculoJFrame extends javax.swing.JFrame {
                 btnQ3ActionPerformed(evt);
             }
         });
-        principalPanel.add(btnQ3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, -1, -1));
+        principalPanel.add(btnQ3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, -1, -1));
 
         btnQ4.setText("Questão 4");
         btnQ4.addActionListener(new java.awt.event.ActionListener() {
@@ -93,7 +94,7 @@ public class CalculoJFrame extends javax.swing.JFrame {
                 btnQ4ActionPerformed(evt);
             }
         });
-        principalPanel.add(btnQ4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 380, -1, -1));
+        principalPanel.add(btnQ4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, -1, -1));
 
         btnQ5.setText("Questão 5");
         btnQ5.addActionListener(new java.awt.event.ActionListener() {
@@ -101,7 +102,7 @@ public class CalculoJFrame extends javax.swing.JFrame {
                 btnQ5ActionPerformed(evt);
             }
         });
-        principalPanel.add(btnQ5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 490, -1, -1));
+        principalPanel.add(btnQ5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, -1, -1));
 
         enunciadoPanel.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -174,11 +175,17 @@ public class CalculoJFrame extends javax.swing.JFrame {
         respostaPanel.setLayout(respostaPanelLayout);
         respostaPanelLayout.setHorizontalGroup(
             respostaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(respostaPanelLayout.createSequentialGroup()
+                .addGap(200, 200, 200)
+                .addComponent(q1RespostaLabel)
+                .addContainerGap(200, Short.MAX_VALUE))
         );
         respostaPanelLayout.setVerticalGroup(
             respostaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(respostaPanelLayout.createSequentialGroup()
+                .addGap(280, 280, 280)
+                .addComponent(q1RespostaLabel)
+                .addContainerGap(280, Short.MAX_VALUE))
         );
 
         principalPanel.add(respostaPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 70, 400, 560));
@@ -218,7 +225,7 @@ public class CalculoJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(principalPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 991, Short.MAX_VALUE)
+            .addComponent(principalPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1000, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -399,6 +406,7 @@ public class CalculoJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel principalPanel;
     private javax.swing.JLabel q1Label;
+    private javax.swing.JLabel q1RespostaLabel;
     private javax.swing.JLabel q2Label;
     private javax.swing.JLabel q3Label;
     private javax.swing.JLabel q4Label;
