@@ -43,19 +43,14 @@ public class CalculoJFrame extends javax.swing.JFrame {
         btnQ4 = new javax.swing.JButton();
         btnQ5 = new javax.swing.JButton();
         enunciadoPanel = new javax.swing.JPanel();
-        q1Label = new javax.swing.JLabel();
-        q2Label = new javax.swing.JLabel();
-        q3Label = new javax.swing.JLabel();
-        q4Label = new javax.swing.JLabel();
-        q5Label = new javax.swing.JLabel();
+        enunciadoLabel = new javax.swing.JLabel();
         respostaPanel = new javax.swing.JPanel();
-        q1RespostaLabel = new javax.swing.JLabel();
+        respostaLabel = new javax.swing.JLabel();
         topoPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1000, 700));
         setResizable(false);
         setSize(new java.awt.Dimension(1000, 768));
 
@@ -110,31 +105,11 @@ public class CalculoJFrame extends javax.swing.JFrame {
         enunciadoPanel.setLayout(enunciadoPanelLayout);
         enunciadoPanelLayout.setHorizontalGroup(
             enunciadoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 480, Short.MAX_VALUE)
             .addGroup(enunciadoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(enunciadoPanelLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(q2Label)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(enunciadoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(enunciadoPanelLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(q3Label)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(enunciadoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(enunciadoPanelLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(q4Label)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(enunciadoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(enunciadoPanelLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(q5Label)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(enunciadoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(enunciadoPanelLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(q1Label)
+                    .addComponent(enunciadoLabel)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         enunciadoPanelLayout.setVerticalGroup(
@@ -143,27 +118,7 @@ public class CalculoJFrame extends javax.swing.JFrame {
             .addGroup(enunciadoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(enunciadoPanelLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(q2Label)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(enunciadoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(enunciadoPanelLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(q3Label)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(enunciadoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(enunciadoPanelLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(q4Label)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(enunciadoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(enunciadoPanelLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(q5Label)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(enunciadoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(enunciadoPanelLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(q1Label)
+                    .addComponent(enunciadoLabel)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
@@ -171,21 +126,24 @@ public class CalculoJFrame extends javax.swing.JFrame {
 
         respostaPanel.setBackground(new java.awt.Color(255, 255, 255));
 
+        respostaLabel.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        respostaLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
         javax.swing.GroupLayout respostaPanelLayout = new javax.swing.GroupLayout(respostaPanel);
         respostaPanel.setLayout(respostaPanelLayout);
         respostaPanelLayout.setHorizontalGroup(
             respostaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(respostaPanelLayout.createSequentialGroup()
-                .addGap(200, 200, 200)
-                .addComponent(q1RespostaLabel)
-                .addContainerGap(200, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(respostaLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
+                .addContainerGap())
         );
         respostaPanelLayout.setVerticalGroup(
             respostaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(respostaPanelLayout.createSequentialGroup()
-                .addGap(280, 280, 280)
-                .addComponent(q1RespostaLabel)
-                .addContainerGap(280, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(respostaLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         principalPanel.add(respostaPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 70, 400, 560));
@@ -236,44 +194,29 @@ public class CalculoJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnQ5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQ5ActionPerformed
-        q1Label.setIcon(null);
-        q2Label.setIcon(null);
-        q3Label.setIcon(null);
-        q4Label.setIcon(null);
-        q2Label.setIcon(new javax.swing.ImageIcon("C:\\Users\\levia\\OneDrive\\Documentos\\NetBeansProjects\\CalculoNumerico\\src\\main\\java\\calculo\\q5.png"));
+        enunciadoLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\levia\\OneDrive\\Documentos\\NetBeansProjects\\CalculoNumerico\\src\\main\\java\\calculo\\q5.png"));
+        respostaLabel.setText("" + q5());
+
     }//GEN-LAST:event_btnQ5ActionPerformed
 
     private void btnQ4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQ4ActionPerformed
-        q1Label.setIcon(null);
-        q2Label.setIcon(null);
-        q3Label.setIcon(null);
-        q5Label.setIcon(null);
-        q4Label.setIcon(new javax.swing.ImageIcon("C:\\Users\\levia\\OneDrive\\Documentos\\NetBeansProjects\\CalculoNumerico\\src\\main\\java\\calculo\\q4.png"));
+        enunciadoLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\levia\\OneDrive\\Documentos\\NetBeansProjects\\CalculoNumerico\\src\\main\\java\\calculo\\q4.png"));
+        respostaLabel.setText("" + q4());
     }//GEN-LAST:event_btnQ4ActionPerformed
 
     private void btnQ3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQ3ActionPerformed
-        // TODO add your handling code here:
-        q1Label.setIcon(null);
-        q2Label.setIcon(null);
-        q4Label.setIcon(null);
-        q5Label.setIcon(null);
-        q3Label.setIcon(new javax.swing.ImageIcon("C:\\Users\\levia\\OneDrive\\Documentos\\NetBeansProjects\\CalculoNumerico\\src\\main\\java\\calculo\\q3.png"));
+        enunciadoLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\levia\\OneDrive\\Documentos\\NetBeansProjects\\CalculoNumerico\\src\\main\\java\\calculo\\q3.png"));
+        respostaLabel.setText("<html>X: " + q3()[0] + "<br />Y: " + q3()[1] + "</html>");
     }//GEN-LAST:event_btnQ3ActionPerformed
 
     private void btnQ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQ2ActionPerformed
-        q1Label.setIcon(null);
-        q3Label.setIcon(null);
-        q4Label.setIcon(null);
-        q5Label.setIcon(null);
-        q2Label.setIcon(new javax.swing.ImageIcon("C:\\Users\\levia\\OneDrive\\Documentos\\NetBeansProjects\\CalculoNumerico\\src\\main\\java\\calculo\\q2.png"));
+        enunciadoLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\levia\\OneDrive\\Documentos\\NetBeansProjects\\CalculoNumerico\\src\\main\\java\\calculo\\q2.png"));
+        respostaLabel.setText("" + q2());
     }//GEN-LAST:event_btnQ2ActionPerformed
 
     private void btnQ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQ1ActionPerformed
-        q2Label.setIcon(null);
-        q3Label.setIcon(null);
-        q4Label.setIcon(null);
-        q5Label.setIcon(null);
-        q1Label.setIcon(new javax.swing.ImageIcon("C:\\Users\\levia\\OneDrive\\Documentos\\NetBeansProjects\\CalculoNumerico\\src\\main\\java\\calculo\\q1.png"));
+        enunciadoLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\levia\\OneDrive\\Documentos\\NetBeansProjects\\CalculoNumerico\\src\\main\\java\\calculo\\q1.png"));
+        respostaLabel.setText("" + q1());
     }//GEN-LAST:event_btnQ1ActionPerformed
     
     /**
@@ -401,16 +344,12 @@ public class CalculoJFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnQ3;
     private javax.swing.JButton btnQ4;
     private javax.swing.JButton btnQ5;
+    private javax.swing.JLabel enunciadoLabel;
     private javax.swing.JPanel enunciadoPanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel principalPanel;
-    private javax.swing.JLabel q1Label;
-    private javax.swing.JLabel q1RespostaLabel;
-    private javax.swing.JLabel q2Label;
-    private javax.swing.JLabel q3Label;
-    private javax.swing.JLabel q4Label;
-    private javax.swing.JLabel q5Label;
+    private javax.swing.JLabel respostaLabel;
     private javax.swing.JPanel respostaPanel;
     private javax.swing.JPanel topoPanel;
     // End of variables declaration//GEN-END:variables
