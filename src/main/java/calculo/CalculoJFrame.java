@@ -5,14 +5,6 @@
  */
 package calculo;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.imageio.ImageIO;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
 
 /**
  *
@@ -57,7 +49,6 @@ public class CalculoJFrame extends javax.swing.JFrame {
         principalPanel.setBackground(new java.awt.Color(204, 204, 204));
         principalPanel.setMinimumSize(new java.awt.Dimension(1000, 760));
         principalPanel.setPreferredSize(new java.awt.Dimension(800, 600));
-        principalPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnQ1.setText("Questão 1");
         btnQ1.addActionListener(new java.awt.event.ActionListener() {
@@ -65,7 +56,6 @@ public class CalculoJFrame extends javax.swing.JFrame {
                 btnQ1ActionPerformed(evt);
             }
         });
-        principalPanel.add(btnQ1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, -1, -1));
 
         btnQ2.setText("Questão 2");
         btnQ2.addActionListener(new java.awt.event.ActionListener() {
@@ -73,7 +63,6 @@ public class CalculoJFrame extends javax.swing.JFrame {
                 btnQ2ActionPerformed(evt);
             }
         });
-        principalPanel.add(btnQ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, -1, -1));
 
         btnQ3.setText("Questão 3");
         btnQ3.addActionListener(new java.awt.event.ActionListener() {
@@ -81,7 +70,6 @@ public class CalculoJFrame extends javax.swing.JFrame {
                 btnQ3ActionPerformed(evt);
             }
         });
-        principalPanel.add(btnQ3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, -1, -1));
 
         btnQ4.setText("Questão 4");
         btnQ4.addActionListener(new java.awt.event.ActionListener() {
@@ -89,7 +77,6 @@ public class CalculoJFrame extends javax.swing.JFrame {
                 btnQ4ActionPerformed(evt);
             }
         });
-        principalPanel.add(btnQ4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, -1, -1));
 
         btnQ5.setText("Questão 5");
         btnQ5.addActionListener(new java.awt.event.ActionListener() {
@@ -97,7 +84,6 @@ public class CalculoJFrame extends javax.swing.JFrame {
                 btnQ5ActionPerformed(evt);
             }
         });
-        principalPanel.add(btnQ5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, -1, -1));
 
         enunciadoPanel.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -122,8 +108,6 @@ public class CalculoJFrame extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        principalPanel.add(enunciadoPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 480, 560));
-
         respostaPanel.setBackground(new java.awt.Color(255, 255, 255));
 
         respostaLabel.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -135,18 +119,16 @@ public class CalculoJFrame extends javax.swing.JFrame {
             respostaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(respostaPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(respostaLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
+                .addComponent(respostaLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 376, Short.MAX_VALUE)
                 .addContainerGap())
         );
         respostaPanelLayout.setVerticalGroup(
             respostaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(respostaPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(respostaLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE)
+                .addComponent(respostaLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 536, Short.MAX_VALUE)
                 .addContainerGap())
         );
-
-        principalPanel.add(respostaPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 70, 400, 560));
 
         topoPanel.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -177,7 +159,52 @@ public class CalculoJFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        principalPanel.add(topoPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
+        javax.swing.GroupLayout principalPanelLayout = new javax.swing.GroupLayout(principalPanel);
+        principalPanel.setLayout(principalPanelLayout);
+        principalPanelLayout.setHorizontalGroup(
+            principalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(principalPanelLayout.createSequentialGroup()
+                .addGap(90, 90, 90)
+                .addComponent(enunciadoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(btnQ3)
+            .addComponent(btnQ1)
+            .addComponent(btnQ5)
+            .addComponent(btnQ2)
+            .addComponent(btnQ4)
+            .addGroup(principalPanelLayout.createSequentialGroup()
+                .addGap(580, 580, 580)
+                .addComponent(respostaPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(principalPanelLayout.createSequentialGroup()
+                .addGap(80, 80, 80)
+                .addComponent(topoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        principalPanelLayout.setVerticalGroup(
+            principalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(principalPanelLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(enunciadoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(principalPanelLayout.createSequentialGroup()
+                .addGap(210, 210, 210)
+                .addComponent(btnQ3))
+            .addGroup(principalPanelLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(btnQ1))
+            .addGroup(principalPanelLayout.createSequentialGroup()
+                .addGap(350, 350, 350)
+                .addComponent(btnQ5))
+            .addGroup(principalPanelLayout.createSequentialGroup()
+                .addGap(140, 140, 140)
+                .addComponent(btnQ2))
+            .addGroup(principalPanelLayout.createSequentialGroup()
+                .addGap(280, 280, 280)
+                .addComponent(btnQ4))
+            .addGroup(principalPanelLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(respostaPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(principalPanelLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(topoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -194,28 +221,28 @@ public class CalculoJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnQ5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQ5ActionPerformed
-        enunciadoLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\levia\\OneDrive\\Documentos\\NetBeansProjects\\CalculoNumerico\\src\\main\\java\\calculo\\q5.png"));
+        enunciadoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/q5.png")));
         respostaLabel.setText("" + q5());
 
     }//GEN-LAST:event_btnQ5ActionPerformed
 
     private void btnQ4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQ4ActionPerformed
-        enunciadoLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\levia\\OneDrive\\Documentos\\NetBeansProjects\\CalculoNumerico\\src\\main\\java\\calculo\\q4.png"));
+        enunciadoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/q4.png")));
         respostaLabel.setText("" + q4());
     }//GEN-LAST:event_btnQ4ActionPerformed
 
     private void btnQ3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQ3ActionPerformed
-        enunciadoLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\levia\\OneDrive\\Documentos\\NetBeansProjects\\CalculoNumerico\\src\\main\\java\\calculo\\q3.png"));
+        enunciadoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/q3.png")));
         respostaLabel.setText("<html>X: " + q3()[0] + "<br />Y: " + q3()[1] + "</html>");
     }//GEN-LAST:event_btnQ3ActionPerformed
 
     private void btnQ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQ2ActionPerformed
-        enunciadoLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\levia\\OneDrive\\Documentos\\NetBeansProjects\\CalculoNumerico\\src\\main\\java\\calculo\\q2.png"));
+        enunciadoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/q2.png")));
         respostaLabel.setText("" + q2());
     }//GEN-LAST:event_btnQ2ActionPerformed
 
     private void btnQ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQ1ActionPerformed
-        enunciadoLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\levia\\OneDrive\\Documentos\\NetBeansProjects\\CalculoNumerico\\src\\main\\java\\calculo\\q1.png"));
+        enunciadoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/q1.png")));
         respostaLabel.setText("" + q1());
     }//GEN-LAST:event_btnQ1ActionPerformed
     
